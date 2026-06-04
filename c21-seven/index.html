@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Century 21 Seven | Inmobiliaria en Paraguay</title>
+  <meta name="description" content="Century 21 Seven — Tu inmobiliaria de confianza en Fernando de la Mora, Paraguay. Propiedades en venta y alquiler." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════ -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-inner container">
+      <a href="#" class="logo" onclick="showPage('home')">
+        <div class="logo-badge">C21</div>
+        <span class="logo-text">Seven</span>
+      </a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#" onclick="showPage('home')" class="nav-link active" data-page="home">Inicio</a>
+        <a href="#" onclick="showPage('propiedades')" class="nav-link" data-page="propiedades">Propiedades</a>
+        <a href="#" onclick="showPage('asesores')" class="nav-link" data-page="asesores">Asesores</a>
+        <a href="#nosotros" class="nav-link">Nosotros</a>
+      </nav>
+      <a href="https://wa.me/595987290003" target="_blank" class="btn-nav-cta">
+        <i class="ti ti-brand-whatsapp"></i> Contactar
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <i class="ti ti-menu-2"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════
+       PAGE: HOME
+  ══════════════════════════════════ -->
+  <div id="page-home" class="page active">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="container hero-content">
+        <div class="hero-eyebrow">
+          <span class="eyebrow-line"></span>
+          Inmobiliaria de alto nivel · Paraguay
+        </div>
+        <h1 class="hero-title">
+          Encontrá tu<br>
+          <span class="hero-title-gold">propiedad ideal</span>
+        </h1>
+        <p class="hero-subtitle">
+          Accedé al catálogo exclusivo de Century 21 Seven. Propiedades residenciales y comerciales en las mejores zonas de Paraguay.
+        </p>
+
+        <!-- BUSCADOR -->
+        <div class="search-bar">
+          <select id="search-tipo" class="search-select">
+            <option value="">Todos los tipos</option>
+            <option value="casa">Casa</option>
+            <option value="departamento">Departamento</option>
+            <option value="local">Local comercial</option>
+            <option value="oficina">Oficina</option>
+            <option value="terreno">Terreno</option>
+            <option value="galpon">Galpón</option>
+          </select>
+          <select id="search-operacion" class="search-select search-select-sm">
+            <option value="">Venta y alquiler</option>
+            <option value="venta">Venta</option>
+            <option value="alquiler">Alquiler</option>
+          </select>
+          <input id="search-texto" class="search-input" type="text" placeholder="Zona o barrio..." />
+          <button class="search-btn" onclick="buscar()">
+            <i class="ti ti-search"></i> <span>Buscar</span>
+          </button>
+        </div>
+
+        <!-- STATS -->
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-num" id="stat-props">48</div>
+            <div class="hero-stat-label">Propiedades</div>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">10</div>
+            <div class="hero-stat-label">Asesores</div>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">+5</div>
+            <div class="hero-stat-label">Años en el mercado</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROPIEDADES DESTACADAS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-eyebrow">Selección exclusiva</div>
+            <h2 class="section-title">Propiedades <span>destacadas</span></h2>
+          </div>
+          <a href="#" class="btn-see-all" onclick="showPage('propiedades')">
+            Ver todas <i class="ti ti-arrow-right"></i>
+          </a>
+        </div>
+        <div class="props-grid" id="props-destacadas"></div>
+      </div>
+    </section>
+
+    <!-- ASESORES PREVIEW -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-eyebrow" style="color:rgba(190,175,135,0.7)">El equipo</div>
+            <h2 class="section-title">Nuestros <span>asesores</span></h2>
+          </div>
+          <a href="#" class="btn-see-all" onclick="showPage('asesores')">
+            Ver todos <i class="ti ti-arrow-right"></i>
+          </a>
+        </div>
+        <div class="asesores-preview-grid" id="asesores-preview"></div>
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section class="section" id="nosotros">
+      <div class="container">
+        <div class="nosotros-grid">
+          <div>
+            <div class="section-eyebrow">Quiénes somos</div>
+            <h2 class="section-title">Century 21 Seven<br><span>en Paraguay</span></h2>
+            <p class="nosotros-text">
+              Somos la oficina Century 21 en Fernando de la Mora, Central. Parte de la red inmobiliaria más grande del mundo, con el respaldo de una marca global y el conocimiento del mercado local paraguayo.
+            </p>
+            <p class="nosotros-text">
+              Nuestro equipo de asesores certificados te acompaña en todo el proceso: desde la búsqueda hasta la firma del contrato.
+            </p>
+            <div class="nosotros-badges">
+              <div class="nosotros-badge"><i class="ti ti-award"></i> Red global C21</div>
+              <div class="nosotros-badge"><i class="ti ti-shield-check"></i> Asesores certificados</div>
+              <div class="nosotros-badge"><i class="ti ti-map-pin"></i> Fernando de la Mora</div>
+            </div>
+          </div>
+          <div class="nosotros-contact-card">
+            <div class="contact-card-label">Contacto directo</div>
+            <div class="contact-card-name">Century 21 Seven</div>
+            <div class="contact-item">
+              <i class="ti ti-phone"></i>
+              <span>+595 987 290003</span>
+            </div>
+            <div class="contact-item">
+              <i class="ti ti-mail"></i>
+              <span>seven@c21.com.py</span>
+            </div>
+            <div class="contact-item">
+              <i class="ti ti-clock"></i>
+              <span>Lunes a Viernes · 9:00 a 18:00 hs</span>
+            </div>
+            <div class="contact-item">
+              <i class="ti ti-map-pin"></i>
+              <span>Fernando de la Mora, Central, Paraguay</span>
+            </div>
+            <a href="https://wa.me/595987290003" target="_blank" class="btn-wa-big">
+              <i class="ti ti-brand-whatsapp"></i> Escribinos por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-logo">
+          <div class="logo-badge">C21</div>
+          <span class="logo-text">Seven</span>
+        </div>
+        <div class="footer-text">
+          © 2025 Century 21 Seven · Fernando de la Mora, Paraguay
+        </div>
+        <div class="footer-links">
+          <a href="https://www.century21.com.py" target="_blank">century21.com.py</a>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /page-home -->
+
+
+  <!-- ══════════════════════════════════
+       PAGE: PROPIEDADES
+  ══════════════════════════════════ -->
+  <div id="page-propiedades" class="page">
+    <div class="page-header">
+      <div class="container">
+        <div class="page-header-eyebrow">Catálogo completo</div>
+        <h1 class="page-header-title">Propiedades <span>disponibles</span></h1>
+      </div>
+    </div>
+
+    <div class="container" style="padding-top:2rem; padding-bottom:4rem;">
+
+      <!-- FILTROS -->
+      <div class="filtros-bar">
+        <div class="filtros-grupo">
+          <label class="filtro-label">Tipo</label>
+          <div class="filtros-pills" id="filtro-tipo">
+            <button class="pill active" data-val="">Todos</button>
+            <button class="pill" data-val="casa">Casa</button>
+            <button class="pill" data-val="departamento">Depto.</button>
+            <button class="pill" data-val="local">Local</button>
+            <button class="pill" data-val="oficina">Oficina</button>
+            <button class="pill" data-val="terreno">Terreno</button>
+            <button class="pill" data-val="galpon">Galpón</button>
+          </div>
+        </div>
+        <div class="filtros-grupo">
+          <label class="filtro-label">Operación</label>
+          <div class="filtros-pills" id="filtro-operacion">
+            <button class="pill active" data-val="">Todas</button>
+            <button class="pill" data-val="venta">Venta</button>
+            <button class="pill" data-val="alquiler">Alquiler</button>
+          </div>
+        </div>
+        <div class="filtros-grupo filtros-search">
+          <input type="text" id="filtro-texto" class="filtro-input" placeholder="Buscar zona, barrio..." oninput="renderPropiedades()" />
+        </div>
+      </div>
+
+      <!-- RESULTADO COUNT -->
+      <div class="result-count" id="result-count"></div>
+
+      <!-- GRID -->
+      <div class="props-grid" id="props-grid"></div>
+
+      <!-- EMPTY STATE -->
+      <div class="empty-state" id="empty-state" style="display:none;">
+        <i class="ti ti-building-off"></i>
+        <p>No se encontraron propiedades con esos filtros.</p>
+        <button onclick="resetFiltros()" class="btn-reset">Limpiar filtros</button>
+      </div>
+
+    </div>
+  </div><!-- /page-propiedades -->
+
+
+  <!-- ══════════════════════════════════
+       PAGE: ASESORES
+  ══════════════════════════════════ -->
+  <div id="page-asesores" class="page">
+    <div class="page-header">
+      <div class="container">
+        <div class="page-header-eyebrow">El equipo</div>
+        <h1 class="page-header-title">Nuestros <span>asesores</span></h1>
+      </div>
+    </div>
+    <div class="container" style="padding-top:2.5rem; padding-bottom:4rem;">
+      <div class="asesores-grid" id="asesores-grid"></div>
+    </div>
+  </div><!-- /page-asesores -->
+
+
+  <!-- ══════════════════════════════════
+       MODAL: PROPIEDAD DETALLE
+  ══════════════════════════════════ -->
+  <div class="modal-overlay" id="modal-overlay" onclick="closeModal()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()"><i class="ti ti-x"></i></button>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════
+       MODAL: ASESOR DETALLE
+  ══════════════════════════════════ -->
+  <div class="modal-overlay" id="modal-asesor-overlay" onclick="closeAsesorModal()">
+    <div class="modal modal-sm" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeAsesorModal()"><i class="ti ti-x"></i></button>
+      <div class="modal-body" id="modal-asesor-body"></div>
+    </div>
+  </div>
+
+
+  <!-- DATA + JS -->
+  <script src="data/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
