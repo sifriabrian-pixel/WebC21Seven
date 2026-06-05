@@ -10,9 +10,7 @@
 </head>
 <body>
 
-  <!-- ══════════════════════════════════
-       NAVBAR
-  ══════════════════════════════════ -->
+  <!-- NAVBAR -->
   <header class="navbar" id="navbar">
     <div class="navbar-inner container">
       <a href="#" class="logo" onclick="showPage('home')">
@@ -22,7 +20,8 @@
         <a href="#" onclick="showPage('home')" class="nav-link active" data-page="home">Inicio</a>
         <a href="#" onclick="showPage('propiedades')" class="nav-link" data-page="propiedades">Propiedades</a>
         <a href="#" onclick="showPage('asesores')" class="nav-link" data-page="asesores">Asesores</a>
-        <a href="#nosotros" class="nav-link">Nosotros</a>
+        <a href="#" onclick="showPage('publicar')" class="nav-link" data-page="publicar">Publicá tu propiedad</a>
+        <a href="#" onclick="showPage('unete')" class="nav-link" data-page="unete">Sumate</a>
       </nav>
       <a href="https://wa.me/595987290003" target="_blank" class="btn-nav-cta">
         <i class="ti ti-brand-whatsapp"></i> Contactar
@@ -33,9 +32,7 @@
     </div>
   </header>
 
-  <!-- ══════════════════════════════════
-       PAGE: HOME
-  ══════════════════════════════════ -->
+  <!-- ══ PAGE: HOME ══ -->
   <div id="page-home" class="page active">
 
     <!-- HERO -->
@@ -55,8 +52,6 @@
         <p class="hero-subtitle">
           Accedé al catálogo exclusivo de Century 21 Seven. Propiedades residenciales y comerciales en las mejores zonas de Paraguay.
         </p>
-
-        <!-- BUSCADOR -->
         <div class="search-bar">
           <select id="search-tipo" class="search-select">
             <option value="">Todos los tipos</option>
@@ -77,8 +72,6 @@
             <i class="ti ti-search"></i> <span>Buscar</span>
           </button>
         </div>
-
-        <!-- STATS -->
         <div class="hero-stats">
           <div class="hero-stat">
             <div class="hero-stat-num" id="stat-props">48</div>
@@ -114,6 +107,20 @@
       </div>
     </section>
 
+    <!-- BANNER MARCA -->
+    <section class="brand-banner">
+      <div class="brand-banner-logo">
+        <img src="assets/logo-gold.png" alt="C21" />
+      </div>
+      <div class="brand-banner-content">
+        <div class="brand-banner-title">La red inmobiliaria más grande del mundo,<br><span>en tu ciudad.</span></div>
+        <div class="brand-banner-sub">+8.000 oficinas · 80 países · Respaldo global con conocimiento local</div>
+      </div>
+      <a href="#" onclick="showPage('propiedades')" class="brand-banner-cta">
+        Ver propiedades <i class="ti ti-arrow-right"></i>
+      </a>
+    </section>
+
     <!-- ASESORES PREVIEW -->
     <section class="section section-dark">
       <div class="container">
@@ -127,6 +134,32 @@
           </a>
         </div>
         <div class="asesores-preview-grid" id="asesores-preview"></div>
+      </div>
+    </section>
+
+    <!-- PUBLICAR / SUMATE - DOS BLOQUES -->
+    <section class="section section-dual">
+      <div class="container">
+        <div class="dual-grid">
+          <div class="dual-card dual-card-publicar">
+            <div class="dual-card-icon"><i class="ti ti-home-plus"></i></div>
+            <div class="dual-card-eyebrow">Propietarios</div>
+            <h3 class="dual-card-title">¿Tenés una propiedad para vender o alquilar?</h3>
+            <p class="dual-card-text">Nuestro equipo de asesores certificados te ayuda a conseguir el mejor precio en el menor tiempo posible. Alcanzá miles de compradores a través de la red C21.</p>
+            <a href="#" onclick="showPage('publicar')" class="dual-card-btn">
+              Publicá tu propiedad <i class="ti ti-arrow-right"></i>
+            </a>
+          </div>
+          <div class="dual-card dual-card-unete">
+            <div class="dual-card-icon"><i class="ti ti-user-plus"></i></div>
+            <div class="dual-card-eyebrow">Profesionales</div>
+            <h3 class="dual-card-title">¿Querés desarrollarte en el mundo inmobiliario?</h3>
+            <p class="dual-card-text">Sumate al equipo de Century 21 Seven. Capacitación continua, herramientas de primer nivel y el respaldo de la red inmobiliaria más grande del mundo.</p>
+            <a href="#" onclick="showPage('unete')" class="dual-card-btn dual-card-btn-gold">
+              Sumate al equipo <i class="ti ti-arrow-right"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -152,22 +185,10 @@
           <div class="nosotros-contact-card">
             <div class="contact-card-label">Contacto directo</div>
             <div class="contact-card-name">Century 21 Seven</div>
-            <div class="contact-item">
-              <i class="ti ti-phone"></i>
-              <span>+595 987 290003</span>
-            </div>
-            <div class="contact-item">
-              <i class="ti ti-mail"></i>
-              <span>seven@c21.com.py</span>
-            </div>
-            <div class="contact-item">
-              <i class="ti ti-clock"></i>
-              <span>Lunes a Viernes · 9:00 a 18:00 hs</span>
-            </div>
-            <div class="contact-item">
-              <i class="ti ti-map-pin"></i>
-              <span>Fernando de la Mora, Central, Paraguay</span>
-            </div>
+            <div class="contact-item"><i class="ti ti-phone"></i><span>+595 987 290003</span></div>
+            <div class="contact-item"><i class="ti ti-mail"></i><span>seven@c21.com.py</span></div>
+            <div class="contact-item"><i class="ti ti-clock"></i><span>Lunes a Viernes · 9:00 a 18:00 hs</span></div>
+            <div class="contact-item"><i class="ti ti-map-pin"></i><span>Fernando de la Mora, Central, Paraguay</span></div>
             <a href="https://wa.me/595987290003" target="_blank" class="btn-wa-big">
               <i class="ti ti-brand-whatsapp"></i> Escribinos por WhatsApp
             </a>
@@ -182,21 +203,16 @@
         <div class="footer-logo">
           <img src="assets/logo-gold.png" alt="Century 21 Seven" class="logo-img logo-img-sm" />
         </div>
-        <div class="footer-text">
-          © 2025 Century 21 Seven · Fernando de la Mora, Paraguay
-        </div>
+        <div class="footer-text">© 2025 Century 21 Seven · Fernando de la Mora, Paraguay</div>
         <div class="footer-links">
           <a href="https://www.century21.com.py" target="_blank">century21.com.py</a>
         </div>
       </div>
     </footer>
-
   </div><!-- /page-home -->
 
 
-  <!-- ══════════════════════════════════
-       PAGE: PROPIEDADES
-  ══════════════════════════════════ -->
+  <!-- ══ PAGE: PROPIEDADES ══ -->
   <div id="page-propiedades" class="page">
     <div class="page-header">
       <div class="container">
@@ -204,10 +220,7 @@
         <h1 class="page-header-title">Propiedades <span>disponibles</span></h1>
       </div>
     </div>
-
     <div class="container" style="padding-top:2rem; padding-bottom:4rem;">
-
-      <!-- FILTROS -->
       <div class="filtros-bar">
         <div class="filtros-grupo">
           <label class="filtro-label">Tipo</label>
@@ -233,27 +246,19 @@
           <input type="text" id="filtro-texto" class="filtro-input" placeholder="Buscar zona, barrio..." oninput="renderPropiedades()" />
         </div>
       </div>
-
-      <!-- RESULTADO COUNT -->
       <div class="result-count" id="result-count"></div>
-
-      <!-- GRID -->
       <div class="props-grid" id="props-grid"></div>
-
-      <!-- EMPTY STATE -->
       <div class="empty-state" id="empty-state" style="display:none;">
         <i class="ti ti-building-off"></i>
         <p>No se encontraron propiedades con esos filtros.</p>
         <button onclick="resetFiltros()" class="btn-reset">Limpiar filtros</button>
       </div>
-
     </div>
+    <footer class="footer"><div class="container footer-inner"><div class="footer-logo"><img src="assets/logo-gold.png" alt="Century 21 Seven" class="logo-img logo-img-sm" /></div><div class="footer-text">© 2025 Century 21 Seven · Fernando de la Mora, Paraguay</div><div class="footer-links"><a href="https://www.century21.com.py" target="_blank">century21.com.py</a></div></div></footer>
   </div><!-- /page-propiedades -->
 
 
-  <!-- ══════════════════════════════════
-       PAGE: ASESORES
-  ══════════════════════════════════ -->
+  <!-- ══ PAGE: ASESORES ══ -->
   <div id="page-asesores" class="page">
     <div class="page-header">
       <div class="container">
@@ -264,23 +269,152 @@
     <div class="container" style="padding-top:2.5rem; padding-bottom:4rem;">
       <div class="asesores-grid" id="asesores-grid"></div>
     </div>
+    <footer class="footer"><div class="container footer-inner"><div class="footer-logo"><img src="assets/logo-gold.png" alt="Century 21 Seven" class="logo-img logo-img-sm" /></div><div class="footer-text">© 2025 Century 21 Seven · Fernando de la Mora, Paraguay</div><div class="footer-links"><a href="https://www.century21.com.py" target="_blank">century21.com.py</a></div></div></footer>
   </div><!-- /page-asesores -->
 
 
-  <!-- ══════════════════════════════════
-       MODAL: PROPIEDAD DETALLE
-  ══════════════════════════════════ -->
+  <!-- ══ PAGE: PUBLICAR PROPIEDAD ══ -->
+  <div id="page-publicar" class="page">
+    <div class="page-header">
+      <div class="container">
+        <div class="page-header-eyebrow">Propietarios</div>
+        <h1 class="page-header-title">Publicá tu <span>propiedad</span></h1>
+      </div>
+    </div>
+    <div class="container" style="padding-top:3rem; padding-bottom:4rem;">
+      <div class="publicar-grid">
+        <div class="publicar-info">
+          <h2 class="publicar-title">¿Por qué elegir Century 21 Seven?</h2>
+          <div class="publicar-steps">
+            <div class="publicar-step">
+              <div class="step-num">01</div>
+              <div>
+                <div class="step-title">Valuación gratuita</div>
+                <div class="step-text">Nuestros asesores evalúan tu propiedad y te dan el precio justo de mercado sin costo.</div>
+              </div>
+            </div>
+            <div class="publicar-step">
+              <div class="step-num">02</div>
+              <div>
+                <div class="step-title">Difusión en la red C21</div>
+                <div class="step-text">Tu propiedad llega a miles de compradores a través del portal de Century 21 Paraguay y nuestra web.</div>
+              </div>
+            </div>
+            <div class="publicar-step">
+              <div class="step-num">03</div>
+              <div>
+                <div class="step-title">Asesoramiento personalizado</div>
+                <div class="step-text">Un asesor dedicado gestiona todo el proceso: visitas, negociación y cierre del contrato.</div>
+              </div>
+            </div>
+            <div class="publicar-step">
+              <div class="step-num">04</div>
+              <div>
+                <div class="step-title">Cerramos el trato</div>
+                <div class="step-text">Solo cobramos cuando la operación se concreta. Tu éxito es nuestro éxito.</div>
+              </div>
+            </div>
+          </div>
+          <div class="publicar-badges">
+            <div class="nosotros-badge"><i class="ti ti-users"></i> +10 asesores activos</div>
+            <div class="nosotros-badge"><i class="ti ti-world"></i> Red global C21</div>
+            <div class="nosotros-badge"><i class="ti ti-certificate"></i> Asesores certificados</div>
+          </div>
+        </div>
+        <div class="publicar-cta-card">
+          <div class="contact-card-label">Contacto rápido</div>
+          <div class="contact-card-name">Quiero publicar mi propiedad</div>
+          <p style="color:rgba(255,255,255,0.5); font-size:14px; margin-bottom:24px; line-height:1.6;">
+            Escribinos por WhatsApp y un asesor se comunica con vos en menos de 24hs para coordinar la valuación gratuita.
+          </p>
+          <a href="https://wa.me/595987290003?text=Hola%2C%20quiero%20publicar%20mi%20propiedad%20con%20Century%2021%20Seven." target="_blank" class="btn-wa-big">
+            <i class="ti ti-brand-whatsapp"></i> Escribinos por WhatsApp
+          </a>
+          <div class="publicar-divider">o contactanos directamente</div>
+          <div class="contact-item"><i class="ti ti-phone"></i><span>+595 987 290003</span></div>
+          <div class="contact-item"><i class="ti ti-mail"></i><span>seven@c21.com.py</span></div>
+          <div class="contact-item"><i class="ti ti-clock"></i><span>Lunes a Viernes · 9:00 a 18:00 hs</span></div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer"><div class="container footer-inner"><div class="footer-logo"><img src="assets/logo-gold.png" alt="Century 21 Seven" class="logo-img logo-img-sm" /></div><div class="footer-text">© 2025 Century 21 Seven · Fernando de la Mora, Paraguay</div><div class="footer-links"><a href="https://www.century21.com.py" target="_blank">century21.com.py</a></div></div></footer>
+  </div><!-- /page-publicar -->
+
+
+  <!-- ══ PAGE: SUMATE AL EQUIPO ══ -->
+  <div id="page-unete" class="page">
+    <div class="page-header page-header-gold">
+      <div class="container">
+        <div class="page-header-eyebrow">Oportunidad profesional</div>
+        <h1 class="page-header-title">Sumate al <span>equipo</span></h1>
+      </div>
+    </div>
+    <div class="container" style="padding-top:3rem; padding-bottom:4rem;">
+      <div class="unete-grid">
+        <div class="unete-info">
+          <h2 class="publicar-title">Construí tu carrera en el sector inmobiliario</h2>
+          <p class="nosotros-text">En Century 21 Seven buscamos profesionales motivados que quieran desarrollarse en el mundo de los bienes raíces. No es necesaria experiencia previa — nosotros te capacitamos.</p>
+          <div class="unete-beneficios">
+            <div class="unete-beneficio">
+              <div class="unete-icon"><i class="ti ti-school"></i></div>
+              <div>
+                <div class="step-title">Capacitación continua</div>
+                <div class="step-text">Acceso a la plataforma de formación global de Century 21 y capacitaciones locales con el equipo.</div>
+              </div>
+            </div>
+            <div class="unete-beneficio">
+              <div class="unete-icon"><i class="ti ti-trending-up"></i></div>
+              <div>
+                <div class="step-title">Comisiones competitivas</div>
+                <div class="step-text">Esquema de comisiones atractivo. Vos manejás tu tiempo y tus ingresos.</div>
+              </div>
+            </div>
+            <div class="unete-beneficio">
+              <div class="unete-icon"><i class="ti ti-tools"></i></div>
+              <div>
+                <div class="step-title">Herramientas y soporte</div>
+                <div class="step-text">CRM, materiales de marketing, respaldo legal y administrativo del equipo Seven.</div>
+              </div>
+            </div>
+            <div class="unete-beneficio">
+              <div class="unete-icon"><i class="ti ti-world"></i></div>
+              <div>
+                <div class="step-title">Marca global</div>
+                <div class="step-text">Trabajás bajo la marca más reconocida del sector inmobiliario mundial. Eso abre puertas.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="publicar-cta-card">
+          <div class="contact-card-label">Postulate ahora</div>
+          <div class="contact-card-name">Quiero ser asesor en C21 Seven</div>
+          <p style="color:rgba(255,255,255,0.5); font-size:14px; margin-bottom:24px; line-height:1.6;">
+            Escribinos contando un poco sobre vos. Diego Rojas, nuestro Broker, se comunica con vos para una primera charla sin compromiso.
+          </p>
+          <a href="https://wa.me/595987290003?text=Hola%2C%20me%20interesa%20sumarme%20al%20equipo%20de%20asesores%20de%20Century%2021%20Seven." target="_blank" class="btn-wa-big">
+            <i class="ti ti-brand-whatsapp"></i> Escribile a Diego
+          </a>
+          <div class="publicar-divider">perfil que buscamos</div>
+          <div class="requisito-item"><i class="ti ti-check"></i> Mayores de 18 años</div>
+          <div class="requisito-item"><i class="ti ti-check"></i> Actitud proactiva y orientación al cliente</div>
+          <div class="requisito-item"><i class="ti ti-check"></i> Disponibilidad part-time o full-time</div>
+          <div class="requisito-item"><i class="ti ti-check"></i> Experiencia en ventas (deseable, no excluyente)</div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer"><div class="container footer-inner"><div class="footer-logo"><img src="assets/logo-gold.png" alt="Century 21 Seven" class="logo-img logo-img-sm" /></div><div class="footer-text">© 2025 Century 21 Seven · Fernando de la Mora, Paraguay</div><div class="footer-links"><a href="https://www.century21.com.py" target="_blank">century21.com.py</a></div></div></footer>
+  </div><!-- /page-unete -->
+
+
+  <!-- ══ MODAL: PROPIEDAD DETALLE COMPLETO ══ -->
   <div class="modal-overlay" id="modal-overlay" onclick="closeModal()">
-    <div class="modal" onclick="event.stopPropagation()">
+    <div class="modal modal-prop-full" onclick="event.stopPropagation()">
       <button class="modal-close" onclick="closeModal()"><i class="ti ti-x"></i></button>
       <div class="modal-body" id="modal-body"></div>
     </div>
   </div>
 
-
-  <!-- ══════════════════════════════════
-       MODAL: ASESOR DETALLE
-  ══════════════════════════════════ -->
+  <!-- ══ MODAL: ASESOR ══ -->
   <div class="modal-overlay" id="modal-asesor-overlay" onclick="closeAsesorModal()">
     <div class="modal modal-sm" onclick="event.stopPropagation()">
       <button class="modal-close" onclick="closeAsesorModal()"><i class="ti ti-x"></i></button>
@@ -288,8 +422,6 @@
     </div>
   </div>
 
-
-  <!-- DATA + JS -->
   <script src="data/data.js"></script>
   <script src="assets/app.js"></script>
 </body>
